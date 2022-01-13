@@ -1,0 +1,45 @@
+.post {
+  mat-card {
+    .user {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-content: flex-start;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .name {
+        flex-grow: 5;
+      }
+    }
+
+    .content {
+      text-align: start;
+      padding: 40px;
+    }
+
+    .like {
+      width: 90%;
+      height: auto;
+      display: flex;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 0.8em;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      gap: 3em;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}

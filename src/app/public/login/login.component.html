@@ -1,0 +1,32 @@
+<div class="login">
+
+  <div class="login__header">
+    <img src="assets/fb-logo.jpg" alt="logo">
+    <p>
+      Facebook helps you connect and share with the people in your life
+    </p>
+  </div>
+
+  <div class="login__card">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field>
+            <input matInput type="email" placeholder="Email or Phone Number" formControlName='email'>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName='password'>
+          </mat-form-field>
+
+
+          <button mat-raised-button type='submit'>Sign In</button>
+          <a href="#">Forgotten Password?</a>
+        </form>
+
+        <button mat-raised-button class='btn-register'
+          (click)='openRegister()'>{{'create new account'|uppercase}}</button>
+      </mat-card-content>
+    </mat-card>
+    <p class='login__card__tagline'><strong>Create a Page</strong> for celebrity, band, or business</p>
+  </div>
+</div>

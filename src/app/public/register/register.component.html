@@ -1,0 +1,28 @@
+<div mad-dialog-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="user_name">
+      <mat-form-field>
+        <input matInput type="text" placeholder="First Name" formControlName='firstName'>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" matInput placeholder="Last Name" formControlName='lastName'>
+      </mat-form-field>
+    </div>
+    <div class="email__pasword">
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" formControlName='email'>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Avatar" formControlName='avatar'>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName='password'>
+      </mat-form-field>
+    </div>
+
+    <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications
+      from us and can opt out at any time.</p>
+
+    <button mat-raised-button color='primary' [disabled]="validDisable" type='submit'>Create Account</button>
+  </form>
+</div>

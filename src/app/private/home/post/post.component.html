@@ -1,0 +1,66 @@
+<div class="post">
+  <mat-card>
+    <div class="user">
+      <img [src]="data.avatar" alt="avatar">
+      <div class="name">
+        <p>Fikri Harya Sandi</p>
+        <small>1 Jam</small>
+      </div>
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+        [matMenuTriggerFor]="option">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #option="matMenu">
+
+        <div mat-menu-item>
+          <mat-icon>bookmark_border</mat-icon>
+          Save posting
+        </div>
+
+        <button mat-menu-item>
+          <mat-icon>notifications</mat-icon>
+          Activate notification for this post
+        </button>
+
+        <button mat-menu-item>
+          <mat-icon>cancel_presentation</mat-icon>
+          Hidden post
+        </button>
+
+        <button mat-menu-item>
+          <mat-icon>schedule</mat-icon>
+          Snooze for 30 days
+        </button>
+
+        <button mat-menu-item>
+          <mat-icon>cancel</mat-icon>
+          Stop follow
+        </button>
+
+        <button mat-menu-item>
+          <mat-icon>report</mat-icon>
+          report post
+        </button>
+
+
+      </mat-menu>
+    </div>
+
+    <div class="content">
+      <p>
+        {{data.message}}
+      </p>
+    </div>
+
+    <div class="like">
+      <div>
+        <mat-icon>thumb_up_alt</mat-icon>
+        Like
+      </div>
+      <div>
+        <mat-icon>chat</mat-icon>
+        comment
+      </div>
+    </div>
+  </mat-card>
+</div>
